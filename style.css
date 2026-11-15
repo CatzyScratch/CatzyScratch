@@ -1,16 +1,28 @@
+:root {
+	--font-heading: "Noto Sans", "Corbel", "Lucida Sans", sans-serif;
+	--font-mono: "Inconsolata", "Consolas", "SF Mono", monospace;
+}
+
 body {
-	background: linear-gradient(to bottom, #ffffff, #d3d3d3)
+	background: linear-gradient(to bottom, #ffffff, #d3d3d3);
+	min-height: 100vh;
+	margin: 0;
+	padding: 20px;
 }
 
 h1, h2, footer {
-	font-family: Corbel;
+	font-family: var(--font-heading);
 }
+
 #Head1 {
 	background-color: #5061C7;
-	color: #ffff;
+	color: #ffffff;
+	padding: 16px 20px;
+	border-radius: 10px;
 }
+
 div {
-	font-family: Consolas;
+	font-family: var(--font-mono);
 }
 
 #Main {
@@ -21,31 +33,35 @@ div {
 	border: 2px solid black;
 	border-radius: 10px;
 	box-shadow: 4px 4px 10px gray;
-}	
-
-#BlogButton {
-	display: inline-block;
-	padding: 10px 20px;
-	color: white;
-	border-radius: 8px;
-	text-decoration: none;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 0.25);
-	transition: 0.2s;
-	font-family: Consolas;
 }
 
 a:visited {
 	color: blue;
 }
 
-#BlogButton:hover{
+#BlogButton,
+#BlogButton:visited {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #5061C7;
+	color: #ffffff;
+	border-radius: 8px;
+	text-decoration: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+	transition: 0.2s;
+	font-family: var(--font-mono);
+}
+
+#BlogButton:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 #BlogButton:active {
 	transform: translateY(1px);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
+
 #About, #Blog, #Blogs {
 	flex: 1;
 	padding: 20px;
